@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Zvládnu to – Přihlášení</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <div class="login-container" id="loginContainer">
+    <h1>Přihlášení</h1>
+    <input type="email" id="email" placeholder="E-mail" required/>
+    <input type="password" id="password" placeholder="Heslo" required/>
+    <button onclick="login()">Přihlásit se</button>
+    <p>Nemáte účet? <a href="#" onclick="toggleForm()">Zaregistrujte se</a></p>
+  </div>
+
+  <div class="register-container" id="registerContainer" style="display:none;">
+    <h1>Registrace</h1>
+    <input type="email" id="regEmail" placeholder="E-mail" required/>
+    <input type="password" id="regPassword" placeholder="Heslo" required/>
+    <button onclick="register()">Zaregistrovat se</button>
+    <p>Máte účet? <a href="#" onclick="toggleForm()">Přihlaste se</a></p>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

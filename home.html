@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Zvládnu to – Domů</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <div class="navbar">
+    <h2>Zvládnu to</h2>
+    <button onclick="logout()" class="logout">Odhlásit se</button>
+  </div>
+  <div class="main">
+    <h1>Vítejte zpět!</h1>
+    <p>Tady bude váš přehled.</p>
+  </div>
+
+  <script>
+    if (!localStorage.getItem("user")) {
+      window.location.href = "index.html";
+    }
+    function logout() {
+      localStorage.removeItem("user");
+      window.location.href = "index.html";
+    }
+  </script>
+</body>
+</html>
